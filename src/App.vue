@@ -2,18 +2,32 @@
   <div id="app">
     <div class="poke-container">
       <div class="pokemon" v-for="pokemon in pokemons" :style="{ backgroundColor: getColor(pokemon) }">
-        <div class="img-container">
-          <img :src="pokemon.sprites.front_default" :alt="pokemon.name">
+        <div class="frontal">
+          <div class="img-container">
+            <img :src="pokemon.sprites.front_default" :alt="pokemon.name">
+          </div>
+          <div class="info">
+            <span class="number">{{ formatNumber(pokemon.id) }}</span>
+            <h3 class="name">{{ pokemon.name }}</h3>
+            <small class="type">Type: <span>{{ getPokemonType(pokemon) }}</span></small>
+          </div>
         </div>
-        <div class="info">
-          <span class="number">{{ formatNumber(pokemon.id) }}</span>
-          <h3 class="name">{{ pokemon.name }}</h3>
-          <small class="type">Type: <span>{{ getPokemonType(pokemon) }}</span></small>
+        <div class="tracero">
+          <h2>Estadísticas</h2>
+          <ul>
+            <li>HP: {{ pokemon.stats[0].base_stat }}</li>
+            <li>Attack: {{ pokemon.stats[1].base_stat }}</li>
+            <li>Defense: {{ pokemon.stats[2].base_stat }}</li>
+            <li>Special Attack: {{ pokemon.stats[3].base_stat }}</li>
+            <li>Special Defense: {{ pokemon.stats[4].base_stat }}</li>
+            <li>Speed: {{ pokemon.stats[5].base_stat }}</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -27,7 +41,7 @@ export default {
   },
   methods: {
     async fetchPokemon() {
-      const pokemonCount = 150;
+      const pokemonCount = 20;
       const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
       for (let i = 1; i <= pokemonCount; i++) {
         try {
@@ -139,5 +153,51 @@ h1 {
 .pokemon .info .name {
   margin: 15px 0 7px;
   letter-spacing: 1px;
+}
+.pokemon {
+  position: relative;
+  perspective: 1000px;
+}
+
+.frontal,
+.tracero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.frontal {
+  transform: rotateY(0deg);
+
+}
+
+.tracero {
+  transform: rotateY(180deg);
+}
+
+.pokemon:hover .frontal {
+  transform: rotateY(-180deg);
+}
+
+.pokemon:hover .tracero {
+  transform: rotateY(0deg);
+}
+.pokemon {
+  position: relative;
+  perspective: 1000px;
+  height: 300px;
+}
+.tracero ul {
+  list-style: none;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.tracero h2{
+  margin-right: 35px;
+}
+.img-container .number .name .type{
+  margin-right: 80px;
 }
 </style>
