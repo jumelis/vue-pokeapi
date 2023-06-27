@@ -10,8 +10,6 @@ export default {
 
 <template>
   <main>
-  <div>
-      <ScriptHome></ScriptHome>
-  </div>
+      <script-home></script-home>
   </main>
 </template>
