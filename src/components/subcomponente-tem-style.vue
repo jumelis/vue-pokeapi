@@ -54,8 +54,8 @@ h1 {
 }
 .poke-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
   max-width: 1200px;
   margin: 2rem auto;
 }
@@ -102,7 +102,7 @@ h1 {
 }
 .frontal {
   transform: rotateY(0deg);
-  left: 20px;
+  left: 3px;
 }
 .pokemon:hover .frontal {
   transform: rotateY(-180deg);
@@ -143,12 +143,14 @@ h1 {
 }
 .tracero li {
   font-size: 0.5rem;
-  letter-spacing: 0.1rem;
   color: #E2E69F;
   background-color: #8B8B8B;
-  padding: 0.2rem;
-  margin: 0.4rem;
+  padding: 0.6rem;
+  margin: 1rem 0;
   border-radius: 0.5rem;
+}
+.tracero li p {
+  margin: 0;
 }
 .tracero h2{
   margin-right: 35px;
@@ -276,7 +278,7 @@ h1 {
 .btn-AB {
   position: absolute;
   top: 72px;
-  left: 160px;
+  left: 145px;
   width: 75px;
   height: 30px;
   background: #dfdfdfc6;
