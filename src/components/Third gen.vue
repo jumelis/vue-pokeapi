@@ -29,7 +29,7 @@
         const pokemonCount = 386;
         const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
         const pokemons = [];
-        for (let i = 251; i <= pokemonCount; i++) {
+        for (let i = 252; i <= pokemonCount; i++) {
           try {
             const response = await fetch(apiUrl + i);
             const pokemon = await response.json();

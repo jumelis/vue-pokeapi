@@ -26,10 +26,10 @@
       formatNumber,
       getPokemonType,
       async fetchPokemon() {
-        const pokemonCount = 927;
+        const pokemonCount = 1010;
         const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
         const pokemons = [];
-        for (let i = 817; i <= pokemonCount; i++) {
+        for (let i = 899; i <= pokemonCount; i++) {
           try {
             const response = await fetch(apiUrl + i);
             const pokemon = await response.json();
