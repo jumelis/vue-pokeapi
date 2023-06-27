@@ -45,3 +45,8 @@ export async function fetchPokemon() {
     const types = pokemon.types.map(type => type.type.name);
     return types.join(', ');
   }
+
+  export function getPokemonAbility(pokemon) {
+    const abilities = pokemon.abilities.map(ability => ability.ability.name);
+    return abilities.join(', ');
+  }

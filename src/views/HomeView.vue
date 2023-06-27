@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <script-home></script-home>
-  </div>
-</template>
-
 <script>
 import ScriptHome from '../components/script-home.vue'
 
@@ -13,3 +7,11 @@ export default {
   }
 }
 </script>
+
+<template>
+  <main>
+  <div>
+      <ScriptHome></ScriptHome>
+  </div>
+  </main>
+</template>
