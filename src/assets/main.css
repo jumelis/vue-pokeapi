@@ -51,4 +51,7 @@ main {
   align-items: center;
   justify-content: center;
   margin: 0;
+}  
+#body {
+  background-image: url(https://www.pokemontopaz.net/uploads/maps/route201.png)  ;
 }
