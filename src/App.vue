@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
+  <div>
   <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -50,5 +51,6 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </nav>
   </header>
+</div>
   <RouterView />
 </template>
