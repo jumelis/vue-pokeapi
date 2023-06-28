@@ -1,12 +1,6 @@
-<template>
-  <div>
-    <SubComponent :pokemons="pokemons" :getColor="getColor" :formatNumber="formatNumber" :getPokemonType="getPokemonType" />
-  </div>
-</template>
-
 <script>
 import SubComponent from '../components/subcomponente-tem-style.vue'
-import { fetchPokemon, getColor, formatNumber, getPokemonType } from '../api/script-card'
+import { fetchPokemon, getColor, formatNumber, getPokemonType, getPokemonAbility } from '../api/script-card'
 
 export default {
   name: 'MiComponente',
@@ -24,7 +18,12 @@ export default {
   methods: {
     getColor,
     formatNumber,
-    getPokemonType
+    getPokemonType,
+    getPokemonAbility
   }
 }
 </script>
+
+<template>
+    <SubComponent :pokemons="pokemons" :getColor="getColor" :formatNumber="formatNumber" :getPokemonType="getPokemonType" :getPokemonAbility="getPokemonAbility" />
+</template>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <SubComponent :pokemons="pokemons" :getColor="getColor" :formatNumber="formatNumber" :getPokemonType="getPokemonType" />
+    <SubComponent :pokemons="pokemons" :getColor="getColor" :formatNumber="formatNumber" :getPokemonType="getPokemonType" :getPokemonAbility="getPokemonAbility" />
   </div>
 </template>
 
 <script>
 import SubComponent from '../components/subcomponente-tem-style.vue'
-import { getColor, formatNumber, getPokemonType } from '../api/script-card'
+import { getColor, formatNumber, getPokemonType, getPokemonAbility } from '../api/script-card'
 
 export default {
   name: 'MiComponente',
@@ -25,6 +25,7 @@ export default {
     getColor,
     formatNumber,
     getPokemonType,
+    getPokemonAbility,
     async fetchPokemon() {
       const pokemonCount = 151;
       const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';

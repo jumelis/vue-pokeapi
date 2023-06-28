@@ -29,7 +29,6 @@
     </main>
   </div>
 </template>
-
 <script>
 import SubComponent from '../components/subcomponente-tem-style.vue'
 import { fetchPokemon, getColor, formatNumber, getPokemonType } from '../api/script-card'
@@ -67,11 +66,15 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .d-flex{
       display: flex !important;
       margin-bottom: 1rem;
-      width: 30%;
+      width: 70%;
       margin-left: 70%;
+}
+.btn{
+  background-color: black;
 }
 </style>

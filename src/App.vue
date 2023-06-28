@@ -97,4 +97,5 @@ async function searchPokemon() {
     </nav>
   </header>
   <RouterView />
-</div></template>
+</div>
+</template>
