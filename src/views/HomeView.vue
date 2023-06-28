@@ -4,7 +4,7 @@
     <header>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="pokemonID">
-        <button class="btn btn-outline-success" type="button" @click="searchPokemon">Search</button>
+        <button class="btn btn-outline-success" type="button" @click="searchButtonText ==='Reset' ? resetPage(): searchPokemon() "> {{ searchButtonText }}</button>
       </form>
     </header>
     <main>
@@ -29,6 +29,7 @@
     </main>
   </div>
 </template>
+
 <script>
 import SubComponent from '../components/subcomponente-tem-style.vue'
 import { fetchPokemon, getColor, formatNumber, getPokemonType } from '../api/script-card'
@@ -46,6 +47,11 @@ export default {
       filteredPokemon: null
     };
   },
+   computed: {
+    searchButtonText() {
+       return this.filteredPokemon ? 'Reset' : 'Search';
+    }
+  },
   async mounted() {
     this.pokemons = await fetchPokemon();
   },
@@ -54,15 +60,30 @@ export default {
     formatNumber,
     getPokemonType,
     async searchPokemon() {
-      try {
-        const pokemonToFind = await fetch(`${pokeapi}/${this.pokemonID}`);
-        const pokemon = await pokemonToFind.json();
-        console.log(pokemon);
-        this.filteredPokemon = pokemon;
-      } catch (error) {
-        alert('Pokemon Id not exist!');
+      if (this.filteredPokemon) {
+
+        this.pokemonID = '';
+        this.filteredPokemon = null;
+        
+      }
+      else {
+
+
+        try {
+          const pokemonToFind = await fetch(`${pokeapi}/${this.pokemonID}`);
+          const pokemon = await pokemonToFind.json();
+          console.log(pokemon);
+          this.filteredPokemon = pokemon;
+        } catch (error) {
+             alert('Pokemon ID does not exist!');
+
+
+        }
       }
     },
+    resetPage() {
+      window.location.reload();
+    }
   }
 }
 </script>
