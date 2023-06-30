@@ -17,9 +17,6 @@ import { RouterLink } from 'vue-router'
             <li class="nav-item">
               <RouterLink to="/" class="text-light" id="text__hover">Home</RouterLink>
             </li>
-            <li class="nav-item">
-              <RouterLink to="/search" class="text-light" id="text__hover">Search</RouterLink>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" id="text__hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Generations
@@ -45,10 +42,6 @@ import { RouterLink } from 'vue-router'
               </ul>
             </li>
           </ul>
-          <form class="d-flex col-3" role="search">
-            <input class="form-control me-2 w-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light text-light" type="submit" id="text__hover">Search</button>
-          </form>
         </div>
       </div>
     </nav>

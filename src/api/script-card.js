@@ -17,20 +17,20 @@ export async function fetchPokemon() {
   
   export function getColor(pokemon) {
     const colors = {
-      fire: '#FDDFDF',
-      grass: '#DEFDE0',
-      electric: '#FCF7DE',
-      water: '#DEF3FD',
-      ground: '#f4e7da',
-      rock: '#d5d5d4',
-      fairy: '#fceaff',
-      poison: '#98d7a5',
-      bug: '#f8d5a3',
-      dragon: '#97b3e6',
-      psychic: '#eaeda1',
-      flying: '#F5F5F5',
-      fighting: '#E6E0D4',
-      normal: '#F5F5F5'
+      fire: '#F05030',
+      grass: '#78C850',
+      electric: '	#F8D030',
+      water: '#3899F8',
+      ground: '#E9D6A4',
+      rock: '#B8A058',
+      fairy: '#E79FE7',
+      poison: '#B058A0',
+      bug: '#A8B820',
+      dragon: '#7860E0',
+      psychic: '#F870A0',
+      flying: '#98A8F0',
+      fighting: '#A05038',
+      normal: '#A8A090'
     };
     const types = pokemon.types.map(type => type.type.name);
     const type = types[0];
