@@ -19,7 +19,7 @@ export async function fetchPokemon() {
     const colors = {
       fire: '#F05030',
       grass: '#78C850',
-      electric: '	#F8D030',
+      electric: '#F8D030',
       water: '#3899F8',
       ground: '#E9D6A4',
       rock: '#B8A058',

@@ -6,8 +6,8 @@ import { RouterLink } from 'vue-router'
   <header class="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand col-1" href="/">
-          <img src="../assets/logoPokeWeb.png" alt="Logo PokeWeb" class="img-fluid w-75 me-0">
+        <a class="navbar-brand col-1 me-md-5" href="/">
+          <img src="../assets/logoPokeWeb.png" alt="Logo PokeWeb" class="img-fluid logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -69,5 +69,9 @@ form input::placeholder {
 }
 .dropdown-item{
   font-size: 0.4rem;
+}
+.logo {
+  min-width: 80px;
+  max-width: 100px;
 }
 </style>

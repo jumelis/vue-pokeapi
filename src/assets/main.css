@@ -36,6 +36,10 @@ a,
   background-image: url(https://www.pokemontopaz.net/uploads/maps/route201.png);
   font-family: 'Pokemon';
   font-size: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #app {
